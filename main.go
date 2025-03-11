@@ -7,6 +7,7 @@ func main() {
 
 	msg := osc.NewMessage("/chatbox/input")
 	msg.Append("Hello, world!")
+	msg.Append(true)
 
 	if err := client.Send(msg); err != nil {
 		panic(err)
