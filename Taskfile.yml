@@ -1,0 +1,16 @@
+version: "3"
+
+tasks:
+  pre:
+    cmds:
+      - mkdir -p bin
+
+  build:
+    deps:
+      - pre
+    cmds:
+      - GOOS=windows GOARCH=amd64 go build -o bin/main main.go
+
+  run:
+    cmds:
+      - go run main.go
