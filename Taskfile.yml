@@ -15,7 +15,7 @@ tasks:
     deps:
       - pre
     cmds:
-      - GOOS=windows GOARCH=amd64 go build -o bin/main main.go
+      - GOOS=windows GOARCH=amd64 go build -o bin/main.exe main.go
 
   run:
     cmds:
