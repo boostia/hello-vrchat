@@ -5,6 +5,12 @@ tasks:
     cmds:
       - mkdir -p bin
 
+  clean:
+    deps:
+      - pre
+    cmds:
+      - rm -rf bin/*
+
   build:
     deps:
       - pre
