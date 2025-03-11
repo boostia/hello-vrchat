@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import "github.com/hypebeast/go-osc/osc"
 
 func main() {
-	fmt.Println("Hello World")
+	client := osc.NewClient("127.0.0.1", 9000)
+
+	msg := osc.NewMessage("/chatbox/input")
+	msg.Append("Hello, world!")
+
+	if err := client.Send(msg); err != nil {
+		panic(err)
+	}
 }
